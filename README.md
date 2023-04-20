@@ -6,7 +6,7 @@ We can configure a vCluster for OIDC auth at provisioning time. For this, I'm us
 
 To keep this page compact, I'm only showing the areas of the stock vCluster chart Values file you need to modify. As of this writing, the chart is using v1.26.1 K8s. I've changed it to 1.27.1 for my deployments. You'd need to update the image tags for the other control plane images defined in the chart as well.
 
-Following from my post on OIDC with K8s, you should understand the purpose of `extraArgs` below. I'm then using a handy part of the Values file that lets us use variables within it (Those are wrapped to tpl logic in template). The manifestsTemplate Value will create the cluster-admin ClusterRoleBinding in the vCluster based on a value we supply at creation time.
+Following from my post on OIDC with K8s, you should understand the purpose of `extraArgs` below. I'm then using a handy part of the Values file that lets us use variables within it (I think those are wrapped to tpl logic in the template). The manifestsTemplate Value will create the cluster-admin ClusterRoleBinding in the vCluster based on a value we supply at creation time.
 
 Lastly, I'm creating a LoadBalancer service for the cluster so it will be accessible outside of the host cluster. This would ideally be an Ingress with wildcard URL match.
 
