@@ -160,6 +160,8 @@ users:
  
  ### Test authentication to your vCluster
  
+ Login with a user that is a member of the group you specified in step 3 of creating teh vCluster.
+ 
  ```console
  kubectl get ns --kubeconfig=./kc
  ```
