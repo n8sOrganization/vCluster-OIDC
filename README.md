@@ -1,6 +1,6 @@
 # Configure vCluster with OIDC
 
-This post follows on from my blog post located here. See my other posts for more info on the OIDC pieces.
+This post follows on from my [blog post located here](https://vrelevant.net/vcluster-with-oidc/). See my other posts for more info on the OIDC pieces.
 
 We can configure a vCluster for OIDC auth at provisioning time. For this, I'm using the stock vCluster Helm chart. Refer to the blog post for background on the intent of this config.
 
