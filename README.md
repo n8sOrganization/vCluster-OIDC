@@ -105,7 +105,7 @@ preferences: {}
 users:
 ```
 
-5. Replace host name in `server:`url with LB IP you noted earlier (e.g. server: https://192.168.253.2:443)
+5. Replace host name in `server:`url with LB IP you noted earlier (e.g. `server: https://192.168.253.2:443`)
 
 6. Search and replace all occurreces of the words `kubernetes` and `kubernetes-admin` with `cluster-a` _(This kubeconfig file will not store any specific user identity, it only points to our cluster and directs us to OIDC Auth to prove identity. So we do not need references to users or roles within it)_
 
