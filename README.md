@@ -55,7 +55,7 @@ helm repo update
 kubectl create ns cluster-a
 ```
 
-Replace the `team-a-cluster-admins` value below with a group from your Auth server that a user you will auth as later is a member of.
+Replace the `team-a-cluster-admins` value below with a group from your Auth server. Members of this group will be bound to the cluster-admins role.
 
 ```console
 helm install cluster-a loft-sh/vcluster-k8s -n cluster-a -f ./vals.yaml --set ClusterAdminGroup=team-a-cluster-admins
