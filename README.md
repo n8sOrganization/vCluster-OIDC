@@ -72,7 +72,7 @@ kubectl get svc -n cluster-a cluster-a-lb
 2. Retrieve kubeconfig file
 
 ```console
-kubectl get secret -n cluster-a -o yaml
+kubectl get secret cluster-a-certs -n cluster-a -o yaml
 ```
 
 Locate the `admin.conf` key and copy its entire value to the clipboard.
