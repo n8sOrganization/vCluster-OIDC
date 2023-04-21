@@ -55,10 +55,10 @@ helm repo update
 kubectl create ns cluster-a
 ```
 
-Replace the `team-a-cluster-admins` value below with a group from your Auth server. Members of this group will be bound to the cluster-admins role.
+Replace the `k8s-team-a-cluster-admins` value below with a group from your Auth server. Members of this group will be bound to the cluster-admins role.
 
 ```console
-helm install cluster-a loft-sh/vcluster-k8s -n cluster-a -f ./vals.yaml --set ClusterAdminGroup=team-a-cluster-admins
+helm install cluster-a loft-sh/vcluster-k8s -n cluster-a -f ./vals.yaml --set ClusterAdminGroup=k8s-team-a-cluster-admins
 ```
 
 ### Once the vCluster install is complete, we'll retrieve the generated kubeconfig file and modify it
@@ -70,6 +70,8 @@ kubectl get svc -n cluster-a cluster-a-lb
 ```
 
 2. Retrieve kubeconfig file
+
+_Note: This secret may take an additional minute or two after chart deployment to create._
 
 ```console
 kubectl get secret vc-cluster-a -n cluster-a --template={{.data.config}} | base64 -D > kc
