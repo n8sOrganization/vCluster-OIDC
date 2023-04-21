@@ -72,18 +72,12 @@ kubectl get svc -n cluster-a cluster-a-lb
 2. Retrieve kubeconfig file
 
 ```console
-kubectl get secret cluster-a-certs -n cluster-a -o yaml
+kubectl get secret vc-cluster-a -n cluster-a --template={{.data.config}} | base64 -D > kc
 ```
 
-Locate the `admin.conf` key and copy its entire value to the clipboard.
+3. Open ./kc for editing
 
-3. Decode secret
-
-```console
-echo <paste here> | base64 -d
-```
-
-4. Copy everything from `apiVersion: v1` to `users:` into a new kubeconfig file
+4. Delete every line below `users:`
 
 It should look something like this:
 
