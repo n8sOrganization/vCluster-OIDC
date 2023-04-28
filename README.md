@@ -74,7 +74,7 @@ kubectl get svc -n cluster-a cluster-a-lb
 _Note: This secret may take an additional minute or two after chart deployment to create._
 
 ```console
-kubectl get secret vc-cluster-a -n cluster-a --template={{.data.config}} | base64 -D > kc
+kubectl get secret vc-cluster-a -n cluster-a --template={{.data.config}} | base64 -d > kc
 ```
 
 3. Open ./kc for editing
