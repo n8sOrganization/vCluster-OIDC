@@ -163,5 +163,3 @@ users:
  ```
  
  If everything is configured correctly, you will be redirected to authenticate with your Auth server and then be granted admin access to the vCluster instance. With this foundation, we can build out the automation further for a smoother flow.
- 
- To take this config to the next level with automation of Ingress controller config, refer to the [next blog post](https://vrelevant.net/vcluster-with-automated-ingress-config/)
